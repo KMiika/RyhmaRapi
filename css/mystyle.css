@@ -1,0 +1,24 @@
+html, body
+{
+    height: 100%;
+    width: 100%;
+}
+
+#Sivupaneeli
+{
+    float: left;
+    background-color: lightblue;
+    width: 200px;
+    height: 93%;
+}
+
+#Sivupaneeli ul li
+{
+    list-style: none;
+}
+
+#Sivupaneeli ul li a:hover
+{
+    background-color: lightgrey;
+    font-weight: bold;
+}
