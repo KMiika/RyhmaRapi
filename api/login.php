@@ -14,8 +14,9 @@ require "connection.php";
     if($success > 0){
 
         $kayttajanNimi = $db->prepare("CALL hae_nimi1(?)");//-
+        /*$kayttajanNimi->bindParam($username);*/
 
-        $kayttajanNimi->execute($_POST['username']);//-
+        $kayttajanNimi->execute($username);//-
         $result2 = $kayttajanNimi->fetch(PDO::FETCH_ASSOC);//-
         session_start();
         $_SESSION['username']=$username;
