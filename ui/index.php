@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Simple RestApi</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" media="screen" href="../css/mystyle.css" />
       <script src="rest.js"></script>
   </head>
   <body>
@@ -20,6 +21,16 @@
     }
   ?>
   <hr>
+</div>
+
+<div id="Sivupaneeli">
+  <ul>
+    <li> <a onclick="loadXMLDoc('first.html')">First Page</a> </li>
+    <li> <a onclick="loadXMLDoc('second.html')">Second Page</a> </li>
+    <li> <a onclick="loadXMLDoc('third.html')">Third Page</a> </li>
+    <li> <a onclick="loadXMLDoc('fourth.html')">Fourth Page</a> </li>
+  </ul>
+  
 </div>
 
 <div class="container">
