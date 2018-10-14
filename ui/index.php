@@ -12,7 +12,10 @@
   <?php
   session_start();
     if(isset($_SESSION['username'])){
-      echo 'Tervetuloa '.$_SESSION['username'].'<br>';
+      //require "connection.php";
+      //$result = mysqli_query($_SESSION, "SELECT * FROM hae_nimi;");
+      echo 'Tervetuloa '.$_SESSION['kokoNimi'].'<br>';
+      //echo 'Tervetuloa '$result'<br>';
       echo '<a href="../api/logout.php"><button>Kirjaudu ulos</button></a>';
     }
     else {
@@ -23,14 +26,38 @@
   <hr>
 </div>
 
+
 <div id="Sivupaneeli">
   <ul>
-    <li> <a onclick="loadXMLDoc('first.html')">First Page</a> </li>
+
+    <h5>Tilit ja maksut</h5>
+    <li> <a onclick="loadXMLDoc('tilit.php')">Tilit</a> </li>
+    <li> <a onclick="loadXMLDoc('tilitapahtumat.php')">Tilitaphtumat</a> </li>
+    <li> <a onclick="loadXMLDoc('kortit.php')">Kortit</a> </li>
+    <br><h5>Maksut</h5>
+    <li> <a onclick="loadXMLDoc('uusimaksu.php')">Uusi maksu</a> </li>
+    <li> <a onclick="loadXMLDoc('omasiirto.php')">Oma siirto tilien välillä</a> </li>
+    <li> <a onclick="loadXMLDoc('elaskut.php')">E-Laskut</a> </li>
+    <li> <a onclick="loadXMLDoc('maksupohjat.php')">Maksupohjat</a> </li>
+
+
+    <!--<li> <a onclick="loadXMLDoc('first.php')">First Page</a> </li>
     <li> <a onclick="loadXMLDoc('second.html')">Second Page</a> </li>
     <li> <a onclick="loadXMLDoc('third.html')">Third Page</a> </li>
     <li> <a onclick="loadXMLDoc('fourth.html')">Fourth Page</a> </li>
+
+
+    <li id="panelTitle">Tilit ja maksut</li>
+    <li> <a onclick="loadXMLDoc('tilit.html')">Tilit</a> </li>
+    <li> <a onclick="loadXMLDoc('tilitapahtumat.html')">Tilitaphtumat</a> </li>
+    <li> <a onclick="loadXMLDoc('kortit.html')">Kortit</a> </li>
+    <li id="panelTitle"><br>Maksut</li>
+    <li> <a onclick="loadXMLDoc('uusimaksu.html')">Uusi maksu</a> </li>
+    <li> <a onclick="loadXMLDoc('omasiirto.html')">Oma siirto tilien välillä</a> </li>
+    <li> <a onclick="loadXMLDoc('elaskut.html')">E-Laskut</a> </li>
+    <li> <a onclick="loadXMLDoc('maksupohjat.html')">Maksupohjat</a> </li>-->
   </ul>
-  
+
 </div>
 
 <div class="container">
@@ -76,6 +103,9 @@
 
 
     <div id="results"></div>
+  </div>
+  <div id="content">
+    Here is content
   </div>
   </body>
 </html>

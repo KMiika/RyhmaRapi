@@ -27,6 +27,20 @@ function GetBooks() {
   xhttp.send();
 }
 
+//----------------
+
+function loadXMLDoc(page)
+{
+    var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("content").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", page, true);
+  xhttp.send();
+}
+
 function GetBooks_by_id() {
   var id = document.getElementById('book_id').value;
   var url ='../api/get_books_by_id.php?id=';
