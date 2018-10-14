@@ -1,8 +1,8 @@
 <?php
 	try
 	{
-	 $conn_string = "mysql:host=localhost;dbname=simple_rest_api";
-	 $db = new PDO ($conn_string, "webuser", "webpass");
+	 $conn_string = "mysql:host=mysli.oamk.fi;dbname=opisk_t7koni00";
+	 $db = new PDO ($conn_string, "t7koni00", "Seppo123");
 	 $db->setAttribute (PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	 //print ("Connected\n");
 	}
