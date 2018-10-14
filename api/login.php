@@ -3,7 +3,7 @@ require "connection.php";
 	$username=$_POST['username'];
   $password=$_POST['password'];
 
-  $sql = $db->prepare("SELECT idUsers FROM users WHERE username = :username AND password = :password");
+  $sql = $db->prepare("SELECT idTunnus FROM Tunnus WHERE Ktunnus = :Ktunnus AND Salasana = :Salasana");
   $sql->bindParam(':username',$username);
   $sql->bindParam(':password',$password);
   $sql->execute();
@@ -19,6 +19,6 @@ require "connection.php";
         exit();
     }
     else {
-      header("Location: ../har10/ui/login.html"); 
+      header("Location: ../har10/ui/login.html");
     }
 ?>
