@@ -31,7 +31,7 @@
   <ul>
 
     <h5>Tilit ja maksut</h5>
-    <li> <a onclick="loadXMLDoc('tilit.php')">Tilit</a> </li>
+    <li> <a onclick="loadXMLDoc('../api/get_tilit.php')">Tilit</a> </li>
     <li> <a onclick="loadXMLDoc('../api/get_tilitapahtumat.php')">Tilitapahtumat</a> </li>
     <li> <a onclick="loadXMLDoc('../api/get_kortit.php')">Kortit</a> </li>
     <br><h5>Maksut</h5>
