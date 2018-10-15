@@ -22,7 +22,7 @@ $sql->execute(array($_SESSION['username']));
     <th>Kortin numero</th>
     <th>Tyyppi</th>
     <th>Luottoraja</th>
-    <th>Luotto</th>
+    <th>Luottoa käytettävissä</th>
     </tr>";
 
     //Tulostetaan tiedot luotuun taulukkoon
