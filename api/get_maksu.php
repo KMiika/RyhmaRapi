@@ -5,7 +5,7 @@ include "connection.php";
 session_start();
 
 
-$sql = $db->prepare("SELECT Tilinro, Nimi, Viesti, Viite, Summa FROM Maksu
+$sql = $db->prepare("SELECT Tilinro, Nimi, Viesti, Viite, Erapaiva, Summa FROM Maksu
   JOIN Pankkitili ON  Pankkitili.idPankkitili = Maksu.idPankkitili
   JOIN Asiakas1_Pankkitili ON Pankkitili.idPankkitili = Asiakas1_Pankkitili.idPankkitili
   JOIN Asiakas1 ON Asiakas1_Pankkitili.idAsiakas = Asiakas1.idAsiakas
@@ -21,6 +21,7 @@ $sql = $db->prepare("SELECT Tilinro, Nimi, Viesti, Viite, Summa FROM Maksu
     <th>Nimi</th>
     <th>Viesti</th>
     <th>Viite</th>
+    <th>Erapaiva</th>
     <th>Summa</th>
     </tr>";
 
@@ -31,7 +32,7 @@ $sql = $db->prepare("SELECT Tilinro, Nimi, Viesti, Viite, Summa FROM Maksu
         echo "<td>" . $row['Nimi'] . "</td>";
         echo "<td>" . $row['Viesti'] . "</td>";
         echo "<td>" . $row['Viite'] . "</td>";
-      //  echo "<td>" . $row['Eräpäivä'] . "</td>";
+        echo "<td>" . $row['Erapaiva'] . "</td>";
         echo "<td>" . $row['Summa'] . "</td>";
         echo "</tr>";
     }
