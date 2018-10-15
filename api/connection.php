@@ -1,4 +1,5 @@
 <?php
+include "errorDetector.php";
 	try
 	{
 	 $conn_string = "mysql:host=mysli.oamk.fi;dbname=opisk_t7koni00";
@@ -12,4 +13,4 @@
 	 print ("Error code: " . $e->getCode () . "\n");
 	 print ("Error message: " . $e->getMessage () . "\n");
 	}
-	?>
+?>
