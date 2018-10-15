@@ -20,7 +20,8 @@
       $sql -> execute(array(NULL, $Tilinro, $Nimi,$Viesti,$Viite,$Eräpäivä,$Summa,$Pankkitili));
 
       $yhteys = null;
-      echo "Maksu suoritettu";
+      echo "Maksu suoritettu<br><br>";
+      echo "<input type='submit' value = 'Takaisin' <a href='#' onclick='history.back();'></a>";
 
   http_response_code(201);
 ?>
