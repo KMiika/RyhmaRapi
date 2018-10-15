@@ -11,6 +11,7 @@ require "connection.php";
 
     $success = $result['idTunnus'];
 
+
     if($success > 0){
 
         //Valmistellaan kysely, käyttäjän nimestä.
@@ -33,6 +34,7 @@ require "connection.php";
         header("Location: ../ui/index.php");
         exit();
     }
+    
     else {
     header("Location: ../ui/login.html");
     }
