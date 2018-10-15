@@ -4,6 +4,7 @@ require "connection.php";
 $sql = $db->prepare("SELECT * FROM naytakortit;");
 $sql->execute();
 
+    echo"<div class = 'taulukko'>";
     echo "<table border = '1'>
     <tr>
     <th>KorttiNro</th>
@@ -23,4 +24,5 @@ $sql->execute();
     }
 
     echo "</table>";
+    echo "</div>";
 ?>
