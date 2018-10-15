@@ -22,3 +22,8 @@ html, body
     background-color: lightgrey;
     font-weight: bold;
 }
+
+.container
+{
+  padding: 20px;
+}

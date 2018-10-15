@@ -33,7 +33,7 @@
     <h5>Tilit ja maksut</h5>
     <li> <a onclick="loadXMLDoc('tilit.php')">Tilit</a> </li>
     <li> <a onclick="loadXMLDoc('../api/get_tilitapahtumat.php')">Tilitapahtumat</a> </li>
-    <li> <a onclick="loadXMLDoc('kortit.php')">Kortit</a> </li>
+    <li> <a onclick="loadXMLDoc('../api/get_kortit.php')">Kortit</a> </li>
     <br><h5>Maksut</h5>
     <li> <a onclick="loadXMLDoc('uusimaksu.php')">Uusi maksu</a> </li>
     <li> <a onclick="loadXMLDoc('omasiirto.php')">Oma siirto tilien välillä</a> </li>
@@ -43,7 +43,7 @@
 
 </div>
 
-<div class="container">
+<!--<div class="container">
 
     <p>
         <button class="btn btn-primary" onclick="GetBooks()">Kaikki kirjat</button>
@@ -86,7 +86,7 @@
 
 
     <div id="results"></div>
-  </div>
+  </div>-->
   <div id="content">
     Here is content
   </div>
