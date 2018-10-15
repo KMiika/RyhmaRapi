@@ -37,7 +37,7 @@
     <br><h5>Maksut</h5>
     <li> <a onclick="loadXMLDoc('uusimaksu.html')">Uusi maksu</a> </li>
     <li> <a onclick="loadXMLDoc('omasiirto.php')">Oma siirto tilien välillä</a> </li>
-    <li> <a onclick="loadXMLDoc('elaskut.php')">E-Laskut</a> </li>
+    <li> <a onclick="loadXMLDoc('../api/get_maksu.php')">E-Laskut</a> </li>
     <li> <a onclick="loadXMLDoc('maksupohjat.php')">Maksupohjat</a> </li>
   </ul>
 
