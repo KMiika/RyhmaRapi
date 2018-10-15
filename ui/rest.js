@@ -68,15 +68,15 @@ function GetBooks_by_id() {
   xhttp.send();
 }
 
-function AddBook() {
-	var url = '../api/add_book.php';
+function LisaaMaksu() {
+	var url = '../api/add_maksu.php';
 	var xhttp = new XMLHttpRequest();
 	xhttp.open('POST', url, true);
-	var form = document.getElementById('BookForm');
+	var form = document.getElementById('MaksuForm');
 	var formData = new FormData(form);
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 201) {
-		document.getElementById('results').innerHTML = 'Kirjan lisäys onnistui';
+		document.getElementById('results').innerHTML = 'Maksun lisäys onnistui';
 		} else {
 		document.getElementById('results').innerHTML = 'Virhe';
 		}
