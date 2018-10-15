@@ -4,7 +4,7 @@ include "connection.php";
 
 session_start();
 
-
+//Valmistellaan kysely,jolla noudetaan käyttäjän e-laskujen tapahtumat.
 $sql = $db->prepare("SELECT Tilinro, Nimi, Viesti, Viite, Erapaiva, Summa FROM Maksu
   JOIN Pankkitili ON  Pankkitili.idPankkitili = Maksu.idPankkitili
   JOIN Asiakas1_Pankkitili ON Pankkitili.idPankkitili = Asiakas1_Pankkitili.idPankkitili
@@ -12,8 +12,11 @@ $sql = $db->prepare("SELECT Tilinro, Nimi, Viesti, Viite, Erapaiva, Summa FROM M
   JOIN Tunnus ON Asiakas1.idAsiakas = Tunnus.idAsiakas
   WHERE Ktunnus = ?;");
 
+//Suoritetaan kysely
    $sql->execute(array($_SESSION['username']));
 
+
+   //Muotoilu ja sarakkeiden nimeäminen.
     echo"<div class = 'taulukko'>";
     echo "<table border = '1'>
     <tr>
